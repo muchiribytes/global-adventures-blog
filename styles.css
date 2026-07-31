@@ -254,17 +254,25 @@ footer ul {
     margin-bottom: 15px;
 }
 
+/* --- FOOTER LINK CLEANUP --- */
 footer a {
-    color: #ffffff;
-    text-decoration: underline;
-    transition: color 0.2s ease;
+    color: #ffffff; /* Crisp white link color */
+    text-decoration: none; /* Removes the distracting underline */
+    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0.85; /* Softens static links slightly for subtle visual hierarchy */
 }
 
-footer a:hover {
-    color: #0f91ee;
-    background: none;
-    padding: 0;
-    margin: 0;
+/* Hover & Focus state for accessibility and micro-interaction */
+footer a:hover,
+footer a:focus {
+    color: #38bdf8; /* Highlight color on hover (e.g., bright sky blue) */
+    opacity: 1;
+    text-decoration: underline; /* Re-introduces underline ONLY on hover for clear focus */
+}
+
+/* Keep pipe separators clean and subdued */
+footer .social-media {
+    color: #6b7280; /* Dimmer color for the '|' dividers so links stand out */
 }
 
 footer p {
