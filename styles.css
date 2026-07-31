@@ -42,10 +42,12 @@ header {
 header h1 {
     font-size: 32px;
     margin-bottom: 12px;
+    color: #ffffff; /* Explicitly set heading to crisp white */
 }
 
 header p {
     font-size: 16px;
+    color: #ffffff; /* FIXED: Changed from dark text to pure white for 100% visibility */
     opacity: 0.95;
     max-width: 700px;
     margin: 0 auto;
