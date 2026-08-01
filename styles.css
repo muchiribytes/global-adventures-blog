@@ -54,35 +54,48 @@ header p {
 }
 
 /* ==========================================
-   NAVIGATION BAR
+   NAVIGATION & ACTIVE STATES
    ========================================== */
+
+nav {
+    background-color: #2d2d2d; /* Retains your dark top navigation bar background */
+    padding: 10px 0;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    gap: 35px;
-    background: #333333;
-    padding: 18px;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    transition: color 0.2s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* Target primary menu links for hover boxed background */
-header + nav a:hover,
-.blog-container > nav a:hover {
-    color: #005a9c;
-    background: #ffffff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    margin: -6px -12px;
+/* Hover & Focus state for standard (non-active) links */
+nav a:hover,
+nav a:focus {
+    color: #38bdf8; /* High-contrast sky blue accent */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active Page Indicator (Matches current active page) */
+nav a.active {
+    background-color: #005a9c; /* Brand primary blue background badge */
+    color: #ffffff;
+    font-weight: 600;
 }
 
 /* ==========================================
