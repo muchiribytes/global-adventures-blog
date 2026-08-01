@@ -28,29 +28,39 @@ body {
 }
 
 /* ==========================================
-   HERO HEADER SECTION
+   HEADER SECTION (UNIFORM SIZING)
    ========================================== */
+
 header {
-    text-align: center;
-    padding: 60px 30px;
-    background: #005a9c;
+    background-color: #005a9c;
     color: #ffffff;
+    text-align: center;
+    padding: 24px 20px;
     border-radius: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    
+    /* Lock uniform height across all pages */
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
-    font-size: 32px;
-    margin-bottom: 12px;
-    color: #ffffff; /* Explicitly set heading to crisp white */
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
 }
 
 header p {
-    font-size: 16px;
-    color: #ffffff; /* FIXED: Changed from dark text to pure white for 100% visibility */
-    opacity: 0.95;
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 0.95rem;
+    color: #e0f2fe;
+    margin: 0;
+    max-width: 580px;
+    line-height: 1.4;
 }
 
 /* ==========================================
