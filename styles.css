@@ -235,49 +235,127 @@ form button:hover {
 }
 
 /* ==========================================
-   FOOTER SECTION
+   FOOTER SECTION 3-COLUMN FOOTER
    ========================================== */
 footer {
     background: #333333;
     color: #ffffff;
+    padding: 45px 30px 25px 30px;
     border-radius: 8px;
-    padding: 40px 20px;
-    text-align: center;
     margin-top: 40px;
+    width: 100%;
 }
 
-footer ul {
+/* Outer Container */
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Grid Layout with Equal Tracks & Uniform Gaps */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* 1. Standardize Headings */
+.footer-col h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 16px 0; /* Fixed 16px bottom gap to start line 1 together */
+    line-height: 1.2;
+}
+
+/* 2. Absolute Baseline Reset for First Children */
+.footer-col > p,
+.footer-col > ul,
+.footer-col > .footer-socials {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Column 1: Paragraph */
+.footer-col p {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.9; /* Increased line spacing so wrapped lines don't feel squished */
+    margin-bottom: 0;
+    max-width: 260px; /* Constrains line length so it breaks into balanced lines */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Column 2: Quick Links List */
+.footer-col ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 15px;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 
-/* --- FOOTER LINK CLEANUP --- */
+.footer-col ul li {
+    font-size: 14px;
+    line-height: 1.5; /* Matches Column 1 paragraph line-height exactly */
+    margin-bottom: 8px;
+}
+
+/* Base Links & Hovers */
 footer a {
-    color: #ffffff; /* Crisp white link color */
-    text-decoration: none; /* Removes the distracting underline */
-    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    opacity: 0.85; /* Softens static links slightly for subtle visual hierarchy */
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease-in-out;
 }
 
-/* Hover & Focus state for accessibility and micro-interaction */
 footer a:hover,
 footer a:focus {
-    color: #38bdf8; /* Highlight color on hover (e.g., bright sky blue) */
-    opacity: 1;
-    text-decoration: underline; /* Re-introduces underline ONLY on hover for clear focus */
+    color: #38bdf8;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
-/* Keep pipe separators clean and subdued */
-footer .social-media {
-    color: #6b7280; /* Dimmer color for the '|' dividers so links stand out */
+/* Column 3: Social Links Layout */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 12px;
 }
 
-footer p {
-    color: #ffffff;
+.footer-socials a {
+    line-height: 1.5; /* Forces social link text to match Column 1 and 2 heights */
+}
+
+.footer-col .footer-email {
     font-size: 13px;
-    opacity: 0.8;
-    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.footer-email a {
+    color: #cccccc;
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+    border-top: 1px solid #444444;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #aaaaaa;
+    margin: 0;
+}
+
+/* Responsive View for Mobile */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
