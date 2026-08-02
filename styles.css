@@ -256,6 +256,14 @@ form textarea:focus {
     box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35); /* Soft sky blue halo */
 }
 
+/* Placeholder Text Styling */
+form input::placeholder,
+form textarea::placeholder {
+    color: #9ca3af; /* Soft slate gray */
+    opacity: 1; /* Firefox default fix */
+    font-size: 0.9rem;
+}
+
 /* Base Submit Button */
 form button[type="submit"] {
     display: inline-block;

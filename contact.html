@@ -41,19 +41,19 @@
                 <form action="#submit-message" method="post">
                     <!-- Sender Name -->
                     <label for="user-name">Full Name:</label>
-                    <input type="text" id="user-name" name="sender_name" required>
+                    <input type="text" id="user-name" name="sender_name" placeholder="e.g. Jane Doe" required>
 
                     <!-- Sender Email -->
                     <label for="user-email">Email Address:</label>
-                    <input type="email" id="user-email" name="sender_email" required>
+                    <input type="email" id="user-email" name="sender_email" placeholder="e.g. jane@example.com" required>
 
                     <!-- Subject Line -->
                     <label for="form-subject">Subject:</label>
-                    <input type="text" id="form-subject" name="message_subject" required>
+                    <input type="text" id="form-subject" name="message_subject" placeholder="e.g. Itinerary Question for Tokyo Trip" required>
 
                     <!-- Message Body -->
                     <label for="form-message">Your Travel Message:</label>
-                    <textarea id="form-message" name="message_body" rows="6" required></textarea>
+                    <textarea id="form-message" name="message_body" rows="6" placeholder="Tell us about your upcoming trip or ask us anything..." required></textarea>
 
                     <!-- Submit Button -->
                     <button type="submit">Send Message</button>
