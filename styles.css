@@ -143,49 +143,49 @@ p {
 }
 
 /* ==========================================
-   PHOTO GALLERY GRID (GALLERY.HTML)
+   GALLERY GRID & FLUID STACKING
    ========================================== */
-#photo-gallery ul {
-    list-style: none;
+
+/* Responsive Grid Container */
+.gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 25px;
+    /* Automatically stacks into 1 column on mobile, 2 or 3 on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
 }
 
-#photo-gallery section {
-    box-shadow: none;
-    padding: 20px 0 40px 0;
-    border-bottom: 1px solid #e5e8ef;
+/* Gallery Figure Cards */
+.gallery-grid figure {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
 }
 
-#photo-gallery section:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-figure {
-    background: #ffffff;
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-img {
-    display: block;
+/* Un-squished Image Scaling */
+.gallery-grid img {
     width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 12px;
+    height: 220px;          /* Uniform image height across all cards */
+    object-fit: cover;      /* Crops images cleanly without squishing/stretching */
+    display: block;
 }
 
-figcaption {
-    font-size: 14px;
-    color: #666;
-    font-style: italic;
+/* Captions inside cards */
+.gallery-grid figcaption {
+    padding: 12px 14px;
+    font-size: 0.875rem;
+    color: #4b5563;
+    text-align: center;
     line-height: 1.4;
+    font-style: italic;
+    background-color: #f9fafb;
+    border-top: 1px solid #f3f4f6;
+    margin-top: auto; /* Keeps captions neatly aligned at the bottom */
 }
 
 /* ==========================================
