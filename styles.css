@@ -142,6 +142,11 @@ p {
     color: #444444;
 }
 
+/* Center H2 headings ONLY on the Gallery page */
+main.gallery-page section h2 {
+    text-align: center;
+}
+
 /* ==========================================
    GLOBAL FEATURE & HERO IMAGES (ALL PAGES)
    ========================================== */
