@@ -510,3 +510,22 @@ footer a:focus {
         text-align: center;
     }
 }
+
+/* ==========================================
+   TARGETED MOBILE HERO HEIGHT (INDEX.HTML)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Slim Landscape Banner for Homepage Hero */
+    figure img.hero-img {
+        height: 180px;          /* Compact landscape height */
+        object-fit: cover;      /* Crisp banner crop */
+        object-position: center; /* Centers the camera and pencil focal point */
+    }
+
+    /* Keep standard city hero images uniform */
+    figure > img {
+        height: 160px;
+        object-fit: cover;
+    }
+}
