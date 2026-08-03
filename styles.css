@@ -421,3 +421,76 @@ footer a:focus {
         gap: 30px;
     }
 }
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* Tablet & Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+    /* Container Padding */
+    .blog-container {
+        padding: 0 12px;
+        margin: 16px auto;
+    }
+
+    /* Compact Header Banner */
+    header {
+        padding: 20px 16px;
+        min-height: auto;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.875rem;
+    }
+
+    /* Navigation Wraps & Tappable Touch Targets */
+    nav ul {
+        gap: 6px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* Section Cards - Reduced Padding for Mobile Screens */
+    main section {
+        padding: 20px 16px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+    }
+
+    main section h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Gallery Grid: Force Single Column on Mobile */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Form Fields & Buttons Full Width */
+    form button[type="submit"] {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Extra Small Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.35rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
